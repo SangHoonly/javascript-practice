@@ -1,3 +1,73 @@
 body {
+  color: white;
   font-family: sans-serif;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  width: 90px;
+  height: 30px;
+  margin: 3px;
+  border: none;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.603);
+  font-size: 15px;
+  outline: none;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  width: 400px;
+}
+
+#resultNumber {
+  width: 295px;
+  height: 100%;
+  text-align: end;
+  margin: 0;
+  padding-right: 5px;
+}
+
+#numberButtonContainer {
+  text-align: center;
+  width: 300px;
+}
+
+#numberButtonContainer > button {
+  background-color: #363439;
+  width: 31%;
+}
+
+#numberButtonContainer > button:nth-child(10) {
+  width: 64%;
+}
+#numberButtonContainer > button:active {
+  background-color: #1f1f1f;
+}
+
+#operatorButtonContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#operatorButtonContainer > button {
+  background-color: #fe8e00;
+}
+#operatorButtonContainer > button:active {
+  background-color: #ac6100;
+}
+.result > button:last-child {
+  background-color: #aaa9b1;
+}
+
+.result > button:last-child:active {
+  background-color: #737374;
 }
