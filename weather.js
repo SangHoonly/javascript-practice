@@ -4,11 +4,9 @@ const API_KEY = "af2e28eaf99ebbf34aa879702d8c3e54";
 const COORDS = "coords";
 
 function getWeather(lat, lon) {
-  console.log('hi')
   fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&$lon=${lon}&appid=${API_KEY}&units=metric`
   ).then((response) => response.json).then((json) => {
-    console.log(json);
-    weather.innerText = `${json.main.temp} @ ${json.name}`;
+    weather.innerText = `${json.main.temp} in ${json.name}`;
   });
 }
 
@@ -40,8 +38,7 @@ function loadCoords(){
   if(loadedCords === null){
     askForCoords();
   } else {
-    console.log('hjh');
-    const parseCoords = JSON.parse(loadCords);
+    const parseCoords = JSON.parse(loadedCords);
     getWeather(parseCoords.latitude, parseCoords.longitude);
   }
 }

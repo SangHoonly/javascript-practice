@@ -26,12 +26,13 @@ function addToDo(text) {
   const deleteButton = document.createElement("button");
   const span = document.createElement("span");
   const newId = toDos.length + 1;
-  deleteButton.innerText = "완료";
+  deleteButton.innerText = '✔︎';
   deleteButton.addEventListener("click", deleteToDo);
   span.innerText = text;
   li.appendChild(span);
   li.appendChild(deleteButton);
   li.id = newId;
+  li.classList.add('showing-animation');
   toDoList.appendChild(li);
   const toDoObj = {
     text: text,
@@ -50,7 +51,6 @@ function handleSubmit(event) {
 
 function loadToDos() {
   const loadedToDos = localStorage.getItem(TODOS_LS);
-  // console.log(loadToDos);
   if (loadedToDos !== null) {
     const parsedToDos = JSON.parse(loadedToDos);
     parsedToDos.forEach(toDo => {

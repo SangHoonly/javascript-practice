@@ -6,8 +6,22 @@ body {
   cursor: pointer;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 body {
-  color: #34495e;
+  color: rgba(255, 241, 215, 0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s linear;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .clicked {
@@ -23,14 +37,10 @@ body {
   display: block;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.showing-animation {
+  animation: fadeIn 0.7s linear;
 }
+
 .bgImage {
   position: absolute;
   top: 0;
@@ -39,4 +49,61 @@ body {
   height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
+}
+
+.js-clock {
+  height: 30vh;
+  display: flex;
+  padding: 10vh;
+  animation: fadeIn 0.5s linear;
+  font-size: 6vh;
+}
+
+.js-form input, .js-todoForm input {
+  border: none;
+  background-color:rgba(0, 0, 0, 0);
+  width: 25vw;
+  height: 3vh;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  color:rgba(253, 247, 230, 0.774);
+  font-size: 3vh;
+}
+
+.js-form input::placeholder,
+.js-todoForm input::placeholder {
+  font-size: 3vh;
+  text-align: center;
+  color:rgba(253, 247, 230, 0.774);
+}
+
+.js-form input:focus,
+.js-todoForm input:focus {
+  outline: none;
+}
+
+.js-toDoList {
+  text-align: center;
+}
+
+.js-toDoList button {
+  margin: 0px 20px;
+  font-size: 2.5vh;
+  color:rgba(49, 97, 2, 0.849);
+  border-radius: 50%;
+  background-color: #ebfeff8e;
+  border: none;
+}
+
+.js-toDoList button:focus {
+  outline: none;
+}
+
+.js-toDoList li {
+  color: rgba(255, 197, 187, 0.993);
+}
+
+.greetings {
+  color:rgba(240, 248, 255);
+  font-size: 7vh;
+  margin-top: 0;
 }
