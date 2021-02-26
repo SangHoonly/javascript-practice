@@ -1,19 +1,14 @@
-const fetch = require("node-fetch");
-async function loadData() {
-  const url = 'https://eatgo-customer-api.ahastudio.com/regions';
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
+const nicname = {
+  first: 'Lemmy',
+  last: 'Kilmister',
+};
+
+const getName = ({ first, last }) => {
+  return `${first} ${last}`;
 }
 
+console.log(getName(nicname));
 
-  // const url = 'https://eatgo-customer-api.ahastudio.com/regions';
-
-// fetch("https://jsonplaceholder.typicode.com/posts/1").then((response) =>
-//   console.log(response)
-// )
-
-// const data = loadData();
-// console.log(data);
-loadData();
-console.log(3);
+//화살표 함수 괄호 중괄호 연습
+//화살표 함수 고차함수 연습
+//https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions
