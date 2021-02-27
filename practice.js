@@ -1,13 +1,13 @@
-const nicname = {
-  first: 'Lemmy',
-  last: 'Kilmister',
-};
+const discounter = (discount) => price => price * (1 - discount);
 
-const getName = ({ first, last }) => {
-  return `${first} ${last}`;
-}
+const lsh = (age) => () => console.log(`Age is ${age}`);
 
-console.log(getName(nicname));
+const sayAge = lsh(28);
+console.log(sayAge);
+sayAge();
+
+// const tenPercentOff = discounter(0.1);
+// console.log(tenPercentOff(100));
 
 //화살표 함수 괄호 중괄호 연습
 //화살표 함수 고차함수 연습
